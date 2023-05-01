@@ -9,7 +9,7 @@ const Category = () => {
 	// console.log(categoryNews);
 	return (
 		<div>
-			This is categories {categoryNews.length}
+			{id && <h4>CategoriesNews: {categoryNews.length}</h4>}
 			{categoryNews.map((news) => (
 				<NewsCard key={news._id} news={news}></NewsCard>
 			))}
