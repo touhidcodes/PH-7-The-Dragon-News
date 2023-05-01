@@ -12,7 +12,7 @@ const LeftNav = () => {
 			.catch((error) => console.error(error));
 	}, []);
 
-	console.log(categories);
+	// console.log(categories);
 	return (
 		<div>
 			<h4>All Categories</h4>
@@ -20,7 +20,7 @@ const LeftNav = () => {
 				{categories?.map((item) => (
 					<p key={item.id} className=''>
 						<Link
-							to={`/category/${item.name}`}
+							to={`/category/${item.id}`}
 							className='text-decoration-none text-secondary ps-4'
 						>
 							{item.name}
