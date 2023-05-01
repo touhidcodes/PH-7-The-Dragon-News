@@ -7,16 +7,13 @@ import "./Root.css";
 import Header from "../Pages/Shared/Header/Header";
 import { Outlet } from "react-router-dom";
 
-const Root = () => {
+const NewsLayout = () => {
 	return (
 		<div className='layout'>
 			<Header />
 			<Container>
 				<Row>
-					<Col lg={3}>
-						<LeftNav />
-					</Col>
-					<Col lg={6}>
+					<Col lg={9}>
 						<Outlet />
 					</Col>
 					<Col lg={3}>
@@ -29,4 +26,4 @@ const Root = () => {
 	);
 };
 
-export default Root;
+export default NewsLayout;
