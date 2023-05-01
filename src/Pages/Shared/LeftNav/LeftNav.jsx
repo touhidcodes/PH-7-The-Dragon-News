@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./LeftNav.css";
+import Cards from "../Cards/Cards";
+
 
 const LeftNav = () => {
 	const [categories, setCategories] = useState([]);
@@ -28,6 +30,7 @@ const LeftNav = () => {
 					</p>
 				))}
 			</div>
+			<Cards />
 		</div>
 	);
 };

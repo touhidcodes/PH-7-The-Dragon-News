@@ -4,11 +4,11 @@ import first from "../../../assets/img/1.png";
 import second from "../../../assets/img/2.png";
 import third from "../../../assets/img/3.png";
 
-const EditorsInsights = () => {
+const Cards = () => {
 	return (
 		<div className='mt-4'>
 			<h4>Editors Insights</h4>
-			<Row xs={1} md={2} lg={3} className='g-4 mt-2'>
+			<Row xs={1} md={1} lg={1} className='g-1 mt-2'>
 				<Col>
 					<Card>
 						<Card.Img variant='top' src={first} />
@@ -44,4 +44,4 @@ const EditorsInsights = () => {
 	);
 };
 
-export default EditorsInsights;
+export default Cards;

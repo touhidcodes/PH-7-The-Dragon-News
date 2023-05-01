@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, ListGroup } from "react-bootstrap";
+import { Button, Card, ListGroup } from "react-bootstrap";
 import {
 	FaGoogle,
 	FaGithub,
@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import QZone from "../QZone/QZone";
 import bg from "../../../assets/img/bg.png";
+
 
 const RightNav = () => {
 	return (
@@ -45,6 +46,7 @@ const RightNav = () => {
 			<div className='mt-5'>
 				<img src={bg} alt='' />
 			</div>
+			
 		</div>
 	);
 };
