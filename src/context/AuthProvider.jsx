@@ -11,7 +11,7 @@ import {
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
-	// const [user, setUser] = useState([]);
+	const [user, setUser] = useState([]);
 
 	const createUser = (email, password) => {
 		return createUserWithEmailAndPassword(auth, email, password);
@@ -24,7 +24,7 @@ const AuthProvider = ({ children }) => {
 	const logOut = () => {
 		return signOut(auth);
 	};
-	const user = { name: "hi" };
+
 	useEffect(() => {
 		const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
 			if (user) {
