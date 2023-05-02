@@ -1,9 +1,9 @@
 import React from "react";
 import logo from "../../../../src/assets/img/logo.png";
 import moment from "moment";
-import { Button, Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
-import { Link } from "react-router-dom";
+import NavigationBar from "../NavigationBar/NavigationBar";
 
 const Header = () => {
 	return (
@@ -24,28 +24,7 @@ const Header = () => {
 					</h5>
 				</Marquee>
 			</div>
-			<div>
-				<Navbar collapseOnSelect expand='lg' bg='light' variant='light'>
-					<Container>
-						<Navbar.Toggle aria-controls='responsive-navbar-nav' />
-						<Navbar.Collapse id='responsive-navbar-nav'>
-							<Nav className='mx-auto'>
-								<Nav.Link href='#features'>
-									<Link to='/' className='text-decoration-none'>
-										Home
-									</Link>
-								</Nav.Link>
-								<Nav.Link href='#pricing'>About</Nav.Link>
-								<Nav.Link href='#pricing'>Career</Nav.Link>
-							</Nav>
-							<Nav>
-								<Nav.Link href='#deets'>Profile</Nav.Link>
-								<Button variant='secondary'>Log In</Button>
-							</Nav>
-						</Navbar.Collapse>
-					</Container>
-				</Navbar>
-			</div>
+			<NavigationBar />
 		</div>
 	);
 };
