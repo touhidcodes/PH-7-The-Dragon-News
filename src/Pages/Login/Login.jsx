@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { AuthContext } from "../../context/AuthProvider";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
 	const { logIn } = useContext(AuthContext);
 	const location = useLocation();
 	const navigate = useNavigate();
 
-	const from = location.state?.from?.pathname || "/";
+	const from = location.state?.from?.pathname || "/category/0";
 
 	const handleLogin = (event) => {
 		event.preventDefault();
@@ -22,7 +22,7 @@ const Login = () => {
 				const loggedUser = result.user;
 				console.log(loggedUser);
 				form.reset();
-				navigate(from);
+				navigate(from, { replace: true });
 			})
 			.catch((error) => {
 				console.error(error);
@@ -57,6 +57,11 @@ const Login = () => {
 					<Button variant='primary' type='submit'>
 						Login
 					</Button>
+					<p className='mt-2'>
+						<small>
+							New to Dragon News? <Link to='/registration'>Register</Link>
+						</small>
+					</p>
 				</Form>
 			</Container>
 		</div>

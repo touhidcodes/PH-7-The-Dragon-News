@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { AuthContext } from "../../context/AuthProvider";
+import { Link } from "react-router-dom";
 
 const Registration = () => {
 	const { createUser } = useContext(AuthContext);
@@ -65,7 +66,11 @@ const Registration = () => {
 						/>
 					</Form.Group>
 					<Form.Group className='mb-3' controlId='formBasicCheckbox'>
-						<Form.Check type='checkbox' label='Accept Terms and Conditions *' />
+						<Form.Check
+							type='checkbox'
+							label={<Link to='/terms'>Accept Terms and Conditions *</Link>}
+							required
+						/>
 					</Form.Group>
 					<Button variant='primary' type='submit'>
 						Register
