@@ -22,7 +22,7 @@ const Registration = () => {
 			})
 			.catch((error) => {
 				console.error(error);
-			});
+			});	
 	};
 
 		const handleAccept = (event) => {
