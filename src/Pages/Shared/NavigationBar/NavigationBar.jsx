@@ -22,12 +22,12 @@ const NavigationBar = () => {
 									Home
 								</Link>
 							</Nav.Link>
-							<Nav.Link href='#features'>
+							<Nav.Link href='/about'>
 								<Link to='/about' className='text-decoration-none'>
 									About
 								</Link>
 							</Nav.Link>
-							<Nav.Link href='#features'>
+							<Nav.Link href='/career'>
 								<Link to='/career' className='text-decoration-none'>
 									Career
 								</Link>
