@@ -17,7 +17,7 @@ const Header = () => {
 			</div>
 			<div className='d-flex bg-light p-3 rounded '>
 				<Button variant='danger'>Latest</Button>
-				<Marquee speed={80} className='text-danger'>
+				<Marquee speed={70} className='text-danger'>
 					<h5>
 						Match Highlights: Germany vs Spain — as it happened ! Match
 						Highlights: Germany vs Spain as...
